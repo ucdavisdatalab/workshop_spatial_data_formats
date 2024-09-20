@@ -1,10 +1,10 @@
 ---
-title: YOUR WORKSHOP TITLE
-author: [YOUR NAME]
+title: Introduction to Spatial Data Formats
+author: [Michele Tobias, PhD]
 date: "`r Sys.Date()`"
 
-github-repo: ucdavisdatalab/YOUR_REPO
-url: "https://ucdavisdatalab.github.io/YOUR_REPO/"
+github-repo: ucdavisdatalab/workshop_spatial_data_formats
+url: "https://github.com/ucdavisdatalab/workshop_spatial_data_formats"
 
 lang: en-us
 
@@ -14,4 +14,17 @@ knit: "bookdown::render_book"
 
 # Overview {-}
 
-YOUR DESCRIPTION, LEARNING GOALS, PREREQUISITES, ETC
+## Description
+In this workshop, participants will learn about commonly used spatial data formats - their structures and when to use any given format.
+
+## Learning Goals
+
+By the end of this workshop, participants will understand 
+
+ * The difference between vector and raster data, as well as some niche formats
+ * The reasons to use different data formats
+ * The underlying structure of each data type, conceptually
+ 
+## Prerequisites
+
+There are no prerequisites for this workshop and no software to install.
