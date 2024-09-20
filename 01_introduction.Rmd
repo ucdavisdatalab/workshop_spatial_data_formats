@@ -1,0 +1,87 @@
+# Introduction
+
+
+## Data Types
+All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. Data Types are broad categories of Data Formats and encompass Data Formats that are structured in a similar way. 
+
+With spatial data we typically divide data sets into two Data Types: Vector Data and Raster Data. We'll explore these in greater depth in this workshop.
+
+
+
+## File Formats
+
+A Data Type is related to the concept of a File Format. Certain File Formats are used for specific Data Types, but each Data Type may be achieved with many different File Types.  
+
+For example, consider a nonspatial data type, the text document. This data type is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (can you open the file with any text editor or do you need a specific program like Libre Office for it to work), but they all share a similar way of representing information - text.
+
+Spatial Data Types are ways of abstracting the world and each has a set of File Formats associated with it. For example, Vector Data may be saved as a shapefile (.shp), geopackage (.gpkg), or as a comma separated variable (.csv), just to name a few.  We'll explore this in more detail later.
+
+
+## Why?
+
+Why do we need to know about different spatial data types and data formats? Can't our computers tell what the data is and handle it automatically? 
+
+When we **use** spatial data, we need to know what format it is so we can make good decisions about how to analyze it efficiently. Knowing the format gives us intuition about how we can work with the data inside any given file.
+
+When we **make** spatial data, we need to choose a format that will represent the real world with the highest degree of accuracy.
+
+
+
+
+# Vector
+
+## Exercise 
+
+Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi donut locations in downtown. The topic doesn't really matter. Just draw a map of your choosing.
+
+How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the Vector data type to represent their ideas.
+
+Why? Vector data is best for discrete objects.
+
+## Description
+
+
+## File Formats
+
+
+
+
+
+# Raster
+
+## Exercise 
+
+Open an image or photo on your phone or computer. Zoom in really far. What do you see?
+
+Image files are composed of a grid (imagine graph paper) where each square contains a color. When you zoom out, our brains interpret the image as objects, but it's really a bunch of colored squares. Squares next to each other might be similar in color, but contain small differences in shade or value. A square could contain virtually any color. (Technically, there are limits on the number of colors, but we're not going to get into that today.)
+
+Most photographs you find will be formatted as Raster data.
+
+Why? Raster data is best for gradients.
+
+## Description
+
+## File Formats
+
+
+
+# Cross-Over Data
+
+
+## Vectors Representing Gradients
+
+Topo lines, Isotherms, etc.
+
+
+## Raster Representing Discrete Objects
+
+Crop Type Maps, raster masks
+
+
+
+
+
+# Other Data Types
+
+## Point Cloud Data
+
