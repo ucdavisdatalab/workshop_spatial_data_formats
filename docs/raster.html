@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Spatial Data Formats</title>
-  <meta name="description" content="Introduction to Spatial Data Formats" />
+  <title>3 Raster | Introduction to Spatial Data Formats</title>
+  <meta name="description" content="3 Raster | Introduction to Spatial Data Formats" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Spatial Data Formats" />
+  <meta property="og:title" content="3 Raster | Introduction to Spatial Data Formats" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/workshop_spatial_data_formats" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Spatial Data Formats" />
+  <meta name="twitter:title" content="3 Raster | Introduction to Spatial Data Formats" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="vector.html"/>
+<link rel="next" href="cross-over-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -134,31 +134,20 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Spatial Data Formats</h1>
-<p class="author"><em>Michele Tobias</em></p>
-<p class="author"><em>PhD</em></p>
-<p class="date"><em>2024-09-20</em></p>
+<div id="raster" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Raster<a href="raster.html#raster" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="exercise-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Exercise<a href="raster.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Open an image or photo on your phone or computer. Zoom in really far. What do you see?</p>
+<p>Image files are composed of a grid (imagine graph paper) where each square contains a color. When you zoom out, our brains interpret the image as objects, but it’s really a bunch of colored squares. Squares next to each other might be similar in color, but contain small differences in shade or value. A square could contain virtually any color. (Technically, there are limits on the number of colors, but we’re not going to get into that today.)</p>
+<p>Most photographs you find will be formatted as Raster data.</p>
+<p>Why? Raster data is best for gradients.</p>
 </div>
-<div id="overview" class="section level1 unnumbered hasAnchor">
-<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="description" class="section level2 hasAnchor" number="0.1">
-<h2><span class="header-section-number">0.1</span> Description<a href="index.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this workshop, participants will learn about commonly used spatial data formats - their structures and when to use any given format.</p>
+<div id="description-2" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Description<a href="raster.html#description-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="learning-goals" class="section level2 hasAnchor" number="0.2">
-<h2><span class="header-section-number">0.2</span> Learning Goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this workshop, participants will understand</p>
-<ul>
-<li>The difference between vector and raster data, as well as some niche formats</li>
-<li>The reasons to use different data formats</li>
-<li>The underlying structure of each data type, conceptually</li>
-</ul>
-</div>
-<div id="prerequisites" class="section level2 hasAnchor" number="0.3">
-<h2><span class="header-section-number">0.3</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are no prerequisites for this workshop and no software to install.</p>
-
+<div id="file-formats-2" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> File Formats<a href="raster.html#file-formats-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
 </div>
             </section>
@@ -166,8 +155,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="vector.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="cross-over-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -188,7 +177,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/edit/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/edit/master/01_introduction.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -196,7 +185,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/blob/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/blob/master/01_introduction.Rmd",
 "text": null
 },
 "download": null,

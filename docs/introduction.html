@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Spatial Data Formats</title>
-  <meta name="description" content="Introduction to Spatial Data Formats" />
+  <title>1 Introduction | Introduction to Spatial Data Formats</title>
+  <meta name="description" content="1 Introduction | Introduction to Spatial Data Formats" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Spatial Data Formats" />
+  <meta property="og:title" content="1 Introduction | Introduction to Spatial Data Formats" />
   <meta property="og:type" content="book" />
   
   
   <meta name="github-repo" content="ucdavisdatalab/workshop_spatial_data_formats" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Spatial Data Formats" />
+  <meta name="twitter:title" content="1 Introduction | Introduction to Spatial Data Formats" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="vector.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -134,31 +134,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Spatial Data Formats</h1>
-<p class="author"><em>Michele Tobias</em></p>
-<p class="author"><em>PhD</em></p>
-<p class="date"><em>2024-09-20</em></p>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="data-types" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Data Types<a href="introduction.html#data-types" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>All data is an abstraction… a sample… a way of representing some aspect of the real world. We cannot capture everything. Data Types are broad categories of Data Formats and encompass Data Formats that are structured in a similar way.</p>
+<p>With spatial data we typically divide data sets into two Data Types: Vector Data and Raster Data. We’ll explore these in greater depth in this workshop.</p>
 </div>
-<div id="overview" class="section level1 unnumbered hasAnchor">
-<h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="description" class="section level2 hasAnchor" number="0.1">
-<h2><span class="header-section-number">0.1</span> Description<a href="index.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In this workshop, participants will learn about commonly used spatial data formats - their structures and when to use any given format.</p>
+<div id="file-formats" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> File Formats<a href="introduction.html#file-formats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A Data Type is related to the concept of a File Format. Certain File Formats are used for specific Data Types, but each Data Type may be achieved with many different File Types.</p>
+<p>For example, consider a nonspatial data type, the text document. This data type is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (can you open the file with any text editor or do you need a specific program like Libre Office for it to work), but they all share a similar way of representing information - text.</p>
+<p>Spatial Data Types are ways of abstracting the world and each has a set of File Formats associated with it. For example, Vector Data may be saved as a shapefile (.shp), geopackage (.gpkg), or as a comma separated variable (.csv), just to name a few. We’ll explore this in more detail later.</p>
 </div>
-<div id="learning-goals" class="section level2 hasAnchor" number="0.2">
-<h2><span class="header-section-number">0.2</span> Learning Goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of this workshop, participants will understand</p>
-<ul>
-<li>The difference between vector and raster data, as well as some niche formats</li>
-<li>The reasons to use different data formats</li>
-<li>The underlying structure of each data type, conceptually</li>
-</ul>
-</div>
-<div id="prerequisites" class="section level2 hasAnchor" number="0.3">
-<h2><span class="header-section-number">0.3</span> Prerequisites<a href="index.html#prerequisites" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are no prerequisites for this workshop and no software to install.</p>
-
+<div id="why" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Why?<a href="introduction.html#why" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Why do we need to know about different spatial data types and data formats? Can’t our computers tell what the data is and handle it automatically?</p>
+<p>When we <strong>use</strong> spatial data, we need to know what format it is so we can make good decisions about how to analyze it efficiently. Knowing the format gives us intuition about how we can work with the data inside any given file.</p>
+<p>When we <strong>make</strong> spatial data, we need to choose a format that will represent the real world with the highest degree of accuracy.</p>
 </div>
 </div>
             </section>
@@ -166,8 +159,8 @@
           </div>
         </div>
       </div>
-
-<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vector.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -188,7 +181,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/edit/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/edit/master/01_introduction.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -196,7 +189,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/blob/master/index.Rmd",
+"link": "https://github.com/ucdavisdatalab/workshop_spatial_data_formats/blob/master/01_introduction.Rmd",
 "text": null
 },
 "download": null,
