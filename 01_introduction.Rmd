@@ -139,6 +139,21 @@ Here are some common file formats you'll encounter when working with **other** d
 
 
 
+
+<!--- Additional Resources --->
+# Additional Resources
+
+
+<!--- References --->
+# References
+
+
+
+
+
+
+
+
 <!--- KNITTING NOTES --->
 
 <!---  Put this code in the TERMINAL window in R Studio:
