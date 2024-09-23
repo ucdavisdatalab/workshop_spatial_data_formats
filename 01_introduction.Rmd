@@ -27,7 +27,7 @@ When we **make** spatial data, we need to choose a format that will represent th
 
 
 
-
+<!--- VECTOR DATA --->
 # Vector
 
 ## Exercise 
@@ -40,13 +40,17 @@ Why? Vector data is best for discrete objects.
 
 ## Description
 
+Points, lines, polygons
+
+Geometry + Attributes
+
 
 ## File Formats
 
 
 
 
-
+<!--- RASTER DATA --->
 # Raster
 
 ## Exercise 
@@ -61,10 +65,13 @@ Why? Raster data is best for gradients.
 
 ## Description
 
+Grid - each cell contains one piece of information
+Can have multiple layers (often called bands)
+
 ## File Formats
 
 
-
+<!--- CROSS-OVER DATA --->
 # Cross-Over Data
 
 
@@ -80,8 +87,11 @@ Crop Type Maps, raster masks
 
 
 
-
+<!--- OTHER DATA --->
 # Other Data Types
 
 ## Point Cloud Data
 
+= special instance of vector data
+
+## Mesh Data
