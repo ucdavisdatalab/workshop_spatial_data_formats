@@ -2,7 +2,7 @@
 
 
 ## Data Types
-All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. Data Types are broad categories of Data Formats and encompass Data Formats that are structured in a similar way. 
+All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. Data Types are broad categories of File Formats and encompass File Formats that are structured in a similar way. You can think of these as themes in how data is structured.
 
 With spatial data we typically divide data sets into two Data Types: Vector Data and Raster Data. We'll explore these in greater depth in this workshop.
 
@@ -25,6 +25,22 @@ When we **use** spatial data, we need to know what format it is so we can make g
 
 When we **make** spatial data, we need to choose a format that will represent the real world with the highest degree of accuracy.
 
+## The Big Picture
+
+Spatial Data is usually composed of two parts:
+
+1. Location = Where
+2. Attributes = Information about the locations
+
+You're probably already familiar with the idea of locations with attribute information from apps on your phone or other map-based information sources that are so common today. Let's take a look at an example of a website that helps users find gas stations, GasBuddy:
+
+![Screenshot of GasBuddy showing 4 gas station locations with their prices](images/GasBuddy_2024-09-23.png)
+
+Each location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.
+
+All spatial data uses this format - location + attribute information - but how the information is structured depends on the Data Type and the File Format you store the data in.
+
+Let's dig into some more specifics of each Data Type!
 
 
 <!--- VECTOR DATA --->
@@ -95,3 +111,15 @@ Crop Type Maps, raster masks
 = special instance of vector data
 
 ## Mesh Data
+
+
+
+<!--- KNITTING NOTES --->
+
+<!---  Put this code in the TERMINAL window in R Studio:
+
+cd C:/Users/mmtobias/Documents/GitHub/workshop_spatial_data_formats
+./knit.R
+
+
+--->

@@ -5,6 +5,7 @@ introduction
 data-types
 file-formats
 why
+the-big-picture
 vector
 exercise
 description-1
@@ -18,3 +19,4 @@ vectors-representing-gradients
 raster-representing-discrete-objects
 other-data-types
 point-cloud-data
+mesh-data
