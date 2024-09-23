@@ -20,3 +20,5 @@ raster-representing-discrete-objects
 other-data-types
 point-cloud-data
 mesh-data
+additional-resources
+references
