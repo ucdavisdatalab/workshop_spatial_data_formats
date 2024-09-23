@@ -63,6 +63,13 @@ Geometry + Attributes
 
 ## File Formats
 
+Here are some common file formats you'll encounter when working with **vector** data:
+
+| Name          | File Extension| Notes  |
+| ------------- |:-------------:| ------:|
+| Shapefile     | .shp (with .shx, .dbf, etc.) | Keep all the "sidecar" files together |
+| Geopackage    | .gpkg         | Open format, easy organizing |
+| Geojson       | .geojson      | Open format, human readable  |
 
 
 
@@ -86,6 +93,15 @@ Can have multiple layers (often called bands)
 
 ## File Formats
 
+Here are some common file formats you'll encounter when working with **raster** data:
+
+| Name          | File Extension| Notes  |
+| ------------- |:-------------:| ------:|
+| Geo TIFF      | .tiff or .tif |        |
+|               |               |        |
+|               |               |        |
+|               |               |        |
+
 
 <!--- CROSS-OVER DATA --->
 # Cross-Over Data
@@ -104,6 +120,7 @@ Crop Type Maps, raster masks
 
 
 
+
 <!--- OTHER DATA --->
 # Other Data Types
 
@@ -112,6 +129,13 @@ Crop Type Maps, raster masks
 = special instance of vector data
 
 ## Mesh Data
+
+
+Here are some common file formats you'll encounter when working with **other** data types:
+
+| Name          | File Extension| Notes  |
+| ------------- |:-------------:| ------:|
+|               |               |        |
 
 
 
