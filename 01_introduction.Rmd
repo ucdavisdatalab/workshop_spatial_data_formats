@@ -90,6 +90,7 @@ Can have multiple layers (often called bands)
 <!--- CROSS-OVER DATA --->
 # Cross-Over Data
 
+![A grid comparing discrete vs. continuous data and raster vs. vector data representations of these two situations.](images/geometries_data_types.png)
 
 ## Vectors Representing Gradients
 
