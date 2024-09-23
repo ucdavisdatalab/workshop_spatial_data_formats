@@ -32,7 +32,7 @@ Spatial Data is usually composed of two parts:
 1. Location = Where
 2. Attributes = Information about the locations
 
-You're probably already familiar with the idea of locations with attribute information from apps on your phone or other map-based information sources that are so common today. Let's take a look at an example of a website that helps users find gas stations, GasBuddy:
+You're probably already familiar with the idea of locations with attribute information from apps on your phone or other map-based information sources that are so common today. Let's take a look at an example of a website that helps users find gas stations, [GasBuddy](https://www.gasbuddy.com/):
 
 ![Screenshot of GasBuddy showing 4 gas station locations with their prices](images/GasBuddy_2024-09-23.png)
 
