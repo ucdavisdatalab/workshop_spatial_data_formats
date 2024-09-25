@@ -1,25 +1,25 @@
 # Introduction
 
 
-## Data Types
-All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. Data Types are broad categories of File Formats and encompass File Formats that are structured in a similar way. You can think of these as themes in how data is structured.
+## Data Models
+All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. Data models are broad categories of file formats and encompass file formats that are structured in a similar way. You can think of these as themes in how data is structured.
 
-With spatial data we typically divide data sets into two Data Types: Vector Data and Raster Data. We'll explore these in greater depth in this workshop.
+With spatial data we typically divide data sets into two data models: Vector Data and Raster Data. We'll explore these in greater depth in this workshop.
 
 
 
 ## File Formats
 
-A Data Type is related to the concept of a File Format. Certain File Formats are used for specific Data Types, but each Data Type may be achieved with many different File Types.  
+A data model is related to the concept of a file format. Certain File Formats are used for specific data models, but each data model may be achieved with many different file types.  
 
-For example, consider a nonspatial data type, the text document. This data type is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (can you open the file with any text editor or do you need a specific program like Libre Office for it to work), but they all share a similar way of representing information - text.
+For example, consider a nonspatial data model, the text document. This data model is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (can you open the file with any text editor or do you need a specific program like Libre Office for it to work), but they all share a similar way of representing information - text.
 
-Spatial Data Types are ways of abstracting the world and each has a set of File Formats associated with it. For example, Vector Data may be saved as a shapefile (.shp), geopackage (.gpkg), or as a comma separated variable (.csv), just to name a few.  We'll explore this in more detail later.
+Spatial data models are ways of abstracting the world and each has a set of File Formats associated with it. For example, Vector Data may be saved as a shapefile (.shp), geopackage (.gpkg), or as a comma separated variable (.csv), just to name a few.  We'll explore this in more detail later.
 
 
 ## Why?
 
-Why do we need to know about different spatial data types and data formats? Can't our computers tell what the data is and handle it automatically? 
+Why do we need to know about different spatial data models and data formats? Can't our computers tell what the data is and handle it automatically? 
 
 When we **use** spatial data, we need to know what format it is so we can make good decisions about how to analyze it efficiently. Knowing the format gives us intuition about how we can work with the data inside any given file.
 
@@ -38,9 +38,9 @@ You're probably already familiar with the idea of locations with attribute infor
 
 Each location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.
 
-All spatial data uses this format - location + attribute information - but how the information is structured depends on the Data Type and the File Format you store the data in.
+All spatial data uses this format - location + attribute information - but how the information is structured depends on the data model and the File Format you store the data in.
 
-Let's dig into some more specifics of each Data Type!
+Let's dig into some more specifics of each data model!
 
 
 <!--- VECTOR DATA --->
@@ -50,7 +50,7 @@ Let's dig into some more specifics of each Data Type!
 
 Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi donut locations in downtown. The topic doesn't really matter. Just draw a map of your choosing.
 
-How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the Vector data type to represent their ideas.
+How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the Vector data model to represent their ideas.
 
 Why? Vector data is best for discrete objects.
 
@@ -122,7 +122,7 @@ Crop Type Maps, raster masks
 
 
 <!--- OTHER DATA --->
-# Other Data Types
+# Other data models
 
 ## Point Cloud Data
 
@@ -131,7 +131,7 @@ Crop Type Maps, raster masks
 ## Mesh Data
 
 
-Here are some common file formats you'll encounter when working with **other** data types:
+Here are some common file formats you'll encounter when working with **other** data models:
 
 | Name          | File Extension| Notes  |
 | ------------- |:-------------:| ------:|
