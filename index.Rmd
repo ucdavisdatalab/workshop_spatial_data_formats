@@ -1,6 +1,6 @@
 ---
 title: Introduction to Spatial Data Formats
-author: [Michele Tobias, PhD]
+author: [Michele Tobias]
 date: "`r Sys.Date()`"
 
 github-repo: ucdavisdatalab/workshop_spatial_data_formats

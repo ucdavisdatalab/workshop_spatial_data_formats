@@ -2,7 +2,7 @@
 
 
 ## Data Models
-All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. Data models are broad categories of file formats and encompass file formats that are structured in a similar way. You can think of these as themes in how data is structured.
+All data is an abstraction... a sample... a way of representing some aspect of the real world. We cannot capture everything. A data model is a way to conceptualize data. You can think of these as themes in how data is represented.
 
 With spatial data we typically divide data sets into two data models: Vector Data and Raster Data. We'll explore these in greater depth in this workshop.
 
@@ -10,9 +10,9 @@ With spatial data we typically divide data sets into two data models: Vector Dat
 
 ## File Formats
 
-A data model is related to the concept of a file format. Certain File Formats are used for specific data models, but each data model may be achieved with many different file types.  
+A data model is related to the concept of a file format. Every data model has at least one file format (and usually several file formats) to store data.
 
-For example, consider a nonspatial data model, the text document. This data model is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (can you open the file with any text editor or do you need a specific program like Libre Office for it to work), but they all share a similar way of representing information - text.
+For example, consider a nonspatial data model, the text document. This data model is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (Can you open the file with any text editor or do you need a specific program like Libre Office for it to work?), but they all share a similar way of representing information - text.
 
 Spatial data models are ways of abstracting the world and each has a set of File Formats associated with it. For example, Vector Data may be saved as a shapefile (.shp), geopackage (.gpkg), or as a comma separated variable (.csv), just to name a few.  We'll explore this in more detail later.
 
@@ -29,16 +29,18 @@ When we **make** spatial data, we need to choose a format that will represent th
 
 Spatial Data is usually composed of two parts:
 
-1. Location = Where
+1. Geometry = the location of the data, where it is in space
 2. Attributes = Information about the locations
+
+`A quick note about the geometry: we are simplifying a bit here. Geometries not only contain locations but also require a coordinate reference system (also known as a projection). Data typically comes with a coordinate reference system already defined, so we'll deal with this concept another day. For  more on this topic, see DataLab's [Coordinate Reference Systems Workshop](https://ucdavisdatalab.github.io/workshop_coordinate_reference_systems/).`
 
 You're probably already familiar with the idea of locations with attribute information from apps on your phone or other map-based information sources that are so common today. Let's take a look at an example of a website that helps users find gas stations, [GasBuddy](https://www.gasbuddy.com/):
 
 ![Screenshot of GasBuddy showing 4 gas station locations with their prices](images/GasBuddy_2024-09-23.png)
 
-Each location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.
+Each gas station location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.
 
-All spatial data uses this format - location + attribute information - but how the information is structured depends on the data model and the File Format you store the data in.
+All spatial data uses this format - location + attribute information - but how the information is structured depends on the data model and the file format you store the data in.
 
 Let's dig into some more specifics of each data model!
 
@@ -50,15 +52,25 @@ Let's dig into some more specifics of each data model!
 
 Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi donut locations in downtown. The topic doesn't really matter. Just draw a map of your choosing.
 
-How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the Vector data model to represent their ideas.
+How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the *vector data model* to represent their ideas.
 
-Why? Vector data is best for discrete objects.
+Why? Vector data is best for *discrete objects*. The prompt asked you to think about discrete things - buildings, routes, etc. - so you intuitively picked a data model that worked well for this kind of data.
 
 ## Description
 
-Points, lines, polygons
+Geometry Representation: Points, Lines, & Polygons
 
-Geometry + Attributes
+Attributes Representation: Tables
+
+Let's look at some examples of data we can imagine:
+
+| Geometry          | Example| Attributes  |
+| ------------- |:-------------:| ------:|
+| Points    | Restaurants | name, region, price range |
+| Lines    | Roads | name, speed limit, type |
+| Polygons    | Parks | name, year opened, playground (Y/N) |
+
+The geometry is usually visually represented at images (points, line, and polygons) but the data is actually stored numerically inside the file as a series of coordinate pairs. The data only covers the place where there is data, not the spaces in between the points, lines, or polygons. Compare this with Raster data in the upcoming sections.
 
 
 ## File Formats
@@ -70,6 +82,8 @@ Here are some common file formats you'll encounter when working with **vector** 
 | Shapefile     | .shp (with .shx, .dbf, etc.) | Keep all the "sidecar" files together |
 | Geopackage    | .gpkg         | Open format, easy organizing |
 | Geojson       | .geojson      | Open format, human readable  |
+| Google Keyhole Markup Language (KML) | .kml, .kmz | Google's spatial data format |
+| GPS eXchange Format | .gpx | A common GPS file type |
 
 
 
@@ -88,8 +102,14 @@ Why? Raster data is best for gradients.
 
 ## Description
 
-Grid - each cell contains one piece of information
+Geometry Representation: Grid
+
+Attributes Representation: each cell contains one piece of information
 Can have multiple layers (often called bands)
+
+One piece of information can be stored in each layer or band. This is why it is common to have multiband images. For example, a "color" image is composed on 3 bands - the red, green, and blue components are stored in separate layers and combine by your image viewer software to make it look they way you'd expect.
+
+Coverage is continuous across the dataset, unlike vector data.
 
 ## File Formats
 
@@ -98,9 +118,9 @@ Here are some common file formats you'll encounter when working with **raster** 
 | Name          | File Extension| Notes  |
 | ------------- |:-------------:| ------:|
 | Geo TIFF      | .tiff or .tif |        |
-|               |               |        |
-|               |               |        |
-|               |               |        |
+| geopackage    | .gpkg         | Yes, it stores both raster and vector data  |
+| netCDF        | .nc           | Common in weather & climate data |
+| Hierarchical Data Format (HDF)| .hdf5  | Common in weather & climate data |
 
 
 <!--- CROSS-OVER DATA --->
@@ -115,10 +135,7 @@ Topo lines, Isotherms, etc.
 
 ## Raster Representing Discrete Objects
 
-Crop Type Maps, raster masks
-
-
-
+Crop Type Maps, raster masks, scanned maps like USGS topo maps
 
 
 <!--- OTHER DATA --->
@@ -126,7 +143,13 @@ Crop Type Maps, raster masks
 
 ## Point Cloud Data
 
-= special instance of vector data
+Point cloud data is a special instance of vector data. Points represent the elevation at which a lidar beam intersects with an object to produce a high volume of points that can be used to construct elevation models or 3D models.
+
+The [PDAL library](https://pdal.io/) (pronounced "pee-dahl" or "poodle") is a common tool for working with and visualizing this kind of data.
+
+## Triangular Irregular Network (TIN)
+
+Triangular Irregular Networks (TIN) are useful to represent surfaces. Data you might see stored as a TIN includes slope, elevation, and aspect. The geometry for this data model is combination of points, lines, and polygons, called points, edges, and facets.
 
 ## Mesh Data
 
@@ -143,11 +166,15 @@ Here are some common file formats you'll encounter when working with **other** d
 <!--- Additional Resources --->
 # Additional Resources
 
-## Workshops
+## Workshops & Learning
 
 [Intro to GIS with QGIS](https://ucdavisdatalab.github.io/Intro-to-Desktop-GIS-with-QGIS/)
 
 [Cartography for Map Figures in Academic Journals & Books](https://github.com/MicheleTobias/Workshop-Cartography-Journal-Figures/blob/master/README.md)
+
+[GIS Geography: The Ultimate List of GIS Formats and Geospatial File Extensions](https://gisgeography.com/gis-formats/)
+
+[NCAR Climate Data Guide: Common Climate Data Formats: Overview](https://climatedataguide.ucar.edu/climate-tools/common-climate-data-formats-overview)
 
 ## Software
 
@@ -178,7 +205,7 @@ Bolstad, Paul. 2019. [*GIS Fundamentals: a first text on geographic information 
 <!---  Put this code in the TERMINAL window in R Studio:
 
 cd C:/Users/mmtobias/Documents/GitHub/workshop_spatial_data_formats
-./knit.R
+./knit.R --pdf
 
 
 --->
