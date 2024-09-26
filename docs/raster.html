@@ -21,10 +21,9 @@
   
 
 <meta name="author" content="Michele Tobias" />
-<meta name="author" content="PhD" />
 
 
-<meta name="date" content="2024-09-25" />
+<meta name="date" content="2024-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,11 +111,12 @@
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="other-data-models.html"><a href="other-data-models.html#point-cloud-data"><i class="fa fa-check"></i><b>5.1</b> Point Cloud Data</a></li>
-<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.2</b> Mesh Data</a></li>
+<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2</b> Triangular Irregular Network (TIN)</a></li>
+<li class="chapter" data-level="5.3" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.3</b> Mesh Data</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>6</b> Additional Resources</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops"><i class="fa fa-check"></i><b>6.1</b> Workshops</a></li>
+<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops-learning"><i class="fa fa-check"></i><b>6.1</b> Workshops &amp; Learning</a></li>
 <li class="chapter" data-level="6.2" data-path="additional-resources.html"><a href="additional-resources.html#software"><i class="fa fa-check"></i><b>6.2</b> Software</a></li>
 <li class="chapter" data-level="6.3" data-path="additional-resources.html"><a href="additional-resources.html#books"><i class="fa fa-check"></i><b>6.3</b> Books</a></li>
 </ul></li>
@@ -154,13 +154,21 @@
 </div>
 <div id="description-2" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Description<a href="raster.html#description-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Grid - each cell contains one piece of information
+<p>Geometry Representation: Grid</p>
+<p>Attributes Representation: each cell contains one piece of information
 Can have multiple layers (often called bands)</p>
+<p>One piece of information can be stored in each layer or band. This is why it is common to have multiband images. For example, a “color” image is composed on 3 bands - the red, green, and blue components are stored in separate layers and combine by your image viewer software to make it look they way you’d expect.</p>
+<p>Coverage is continuous across the dataset, unlike vector data.</p>
 </div>
 <div id="file-formats-2" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> File Formats<a href="raster.html#file-formats-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here are some common file formats you’ll encounter when working with <strong>raster</strong> data:</p>
 <table>
+<colgroup>
+<col width="37%" />
+<col width="42%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Name</th>
@@ -175,19 +183,19 @@ Can have multiple layers (often called bands)</p>
 <td align="right"></td>
 </tr>
 <tr class="even">
-<td></td>
-<td align="center"></td>
-<td align="right"></td>
+<td>geopackage</td>
+<td align="center">.gpkg</td>
+<td align="right">Yes, it stores both raster and vector data</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td align="center"></td>
-<td align="right"></td>
+<td>netCDF</td>
+<td align="center">.nc</td>
+<td align="right">Common in weather &amp; climate data</td>
 </tr>
 <tr class="even">
-<td></td>
-<td align="center"></td>
-<td align="right"></td>
+<td>Hierarchical Data Format (HDF)</td>
+<td align="center">.hdf5</td>
+<td align="right">Common in weather &amp; climate data</td>
 </tr>
 </tbody>
 </table>

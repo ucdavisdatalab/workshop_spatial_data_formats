@@ -21,10 +21,9 @@
   
 
 <meta name="author" content="Michele Tobias" />
-<meta name="author" content="PhD" />
 
 
-<meta name="date" content="2024-09-25" />
+<meta name="date" content="2024-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,11 +111,12 @@
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="other-data-models.html"><a href="other-data-models.html#point-cloud-data"><i class="fa fa-check"></i><b>5.1</b> Point Cloud Data</a></li>
-<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.2</b> Mesh Data</a></li>
+<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2</b> Triangular Irregular Network (TIN)</a></li>
+<li class="chapter" data-level="5.3" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.3</b> Mesh Data</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>6</b> Additional Resources</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops"><i class="fa fa-check"></i><b>6.1</b> Workshops</a></li>
+<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops-learning"><i class="fa fa-check"></i><b>6.1</b> Workshops &amp; Learning</a></li>
 <li class="chapter" data-level="6.2" data-path="additional-resources.html"><a href="additional-resources.html#software"><i class="fa fa-check"></i><b>6.2</b> Software</a></li>
 <li class="chapter" data-level="6.3" data-path="additional-resources.html"><a href="additional-resources.html#books"><i class="fa fa-check"></i><b>6.3</b> Books</a></li>
 </ul></li>
@@ -147,10 +147,15 @@
 <h1><span class="header-section-number">5</span> Other data models<a href="other-data-models.html#other-data-models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="point-cloud-data" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Point Cloud Data<a href="other-data-models.html#point-cloud-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>= special instance of vector data</p>
+<p>Point cloud data is a special instance of vector data. Points represent the elevation at which a lidar beam intersects with an object to produce a high volume of points that can be used to construct elevation models or 3D models.</p>
+<p>The <a href="https://pdal.io/">PDAL library</a> (pronounced “pee-dahl” or “poodle”) is a common tool for working with and visualizing this kind of data.</p>
 </div>
-<div id="mesh-data" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Mesh Data<a href="other-data-models.html#mesh-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="triangular-irregular-network-tin" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Triangular Irregular Network (TIN)<a href="other-data-models.html#triangular-irregular-network-tin" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Triangular Irregular Networks (TIN) are useful to represent surfaces. Data you might see stored as a TIN includes slope, elevation, and aspect. The geometry for this data model is combination of points, lines, and polygons, called points, edges, and facets.</p>
+</div>
+<div id="mesh-data" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Mesh Data<a href="other-data-models.html#mesh-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here are some common file formats you’ll encounter when working with <strong>other</strong> data models:</p>
 <table>
 <thead>

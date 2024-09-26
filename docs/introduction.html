@@ -21,10 +21,9 @@
   
 
 <meta name="author" content="Michele Tobias" />
-<meta name="author" content="PhD" />
 
 
-<meta name="date" content="2024-09-25" />
+<meta name="date" content="2024-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,11 +111,12 @@
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="other-data-models.html"><a href="other-data-models.html#point-cloud-data"><i class="fa fa-check"></i><b>5.1</b> Point Cloud Data</a></li>
-<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.2</b> Mesh Data</a></li>
+<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2</b> Triangular Irregular Network (TIN)</a></li>
+<li class="chapter" data-level="5.3" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.3</b> Mesh Data</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>6</b> Additional Resources</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops"><i class="fa fa-check"></i><b>6.1</b> Workshops</a></li>
+<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops-learning"><i class="fa fa-check"></i><b>6.1</b> Workshops &amp; Learning</a></li>
 <li class="chapter" data-level="6.2" data-path="additional-resources.html"><a href="additional-resources.html#software"><i class="fa fa-check"></i><b>6.2</b> Software</a></li>
 <li class="chapter" data-level="6.3" data-path="additional-resources.html"><a href="additional-resources.html#books"><i class="fa fa-check"></i><b>6.3</b> Books</a></li>
 </ul></li>
@@ -147,13 +147,13 @@
 <h1><span class="header-section-number">1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="data-models" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Data Models<a href="introduction.html#data-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>All data is an abstraction… a sample… a way of representing some aspect of the real world. We cannot capture everything. Data models are broad categories of file formats and encompass file formats that are structured in a similar way. You can think of these as themes in how data is structured.</p>
+<p>All data is an abstraction… a sample… a way of representing some aspect of the real world. We cannot capture everything. A data model is a way to conceptualize data. You can think of these as themes in how data is represented.</p>
 <p>With spatial data we typically divide data sets into two data models: Vector Data and Raster Data. We’ll explore these in greater depth in this workshop.</p>
 </div>
 <div id="file-formats" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> File Formats<a href="introduction.html#file-formats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A data model is related to the concept of a file format. Certain File Formats are used for specific data models, but each data model may be achieved with many different file types.</p>
-<p>For example, consider a nonspatial data model, the text document. This data model is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (can you open the file with any text editor or do you need a specific program like Libre Office for it to work), but they all share a similar way of representing information - text.</p>
+<p>A data model is related to the concept of a file format. Every data model has at least one file format (and usually several file formats) to store data.</p>
+<p>For example, consider a nonspatial data model, the text document. This data model is a file containing text characters. You have a number of options for file formats when you save a text document, including a Word Document (.docx), text file (.txt), Google Doc, and Libre Office File. All of these file types store the same critical thing - text - but each may support additional features like text formatting or inclusion of images. Internally, they may store information in different ways, and each file format may differ in human readability (Can you open the file with any text editor or do you need a specific program like Libre Office for it to work?), but they all share a similar way of representing information - text.</p>
 <p>Spatial data models are ways of abstracting the world and each has a set of File Formats associated with it. For example, Vector Data may be saved as a shapefile (.shp), geopackage (.gpkg), or as a comma separated variable (.csv), just to name a few. We’ll explore this in more detail later.</p>
 </div>
 <div id="why" class="section level2 hasAnchor" number="1.3">
@@ -166,13 +166,14 @@
 <h2><span class="header-section-number">1.4</span> The Big Picture<a href="introduction.html#the-big-picture" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Spatial Data is usually composed of two parts:</p>
 <ol style="list-style-type: decimal">
-<li>Location = Where</li>
+<li>Geometry = the location of the data, where it is in space</li>
 <li>Attributes = Information about the locations</li>
 </ol>
+<p><code>A quick note about the geometry: we are simplifying a bit here. Geometries not only contain locations but also require a coordinate reference system (also known as a projection). Data typically comes with a coordinate reference system already defined, so we'll deal with this concept another day. For  more on this topic, see DataLab's [Coordinate Reference Systems Workshop](https://ucdavisdatalab.github.io/workshop_coordinate_reference_systems/).</code></p>
 <p>You’re probably already familiar with the idea of locations with attribute information from apps on your phone or other map-based information sources that are so common today. Let’s take a look at an example of a website that helps users find gas stations, <a href="https://www.gasbuddy.com/">GasBuddy</a>:</p>
 <p><img src="images/GasBuddy_2024-09-23.png" alt="Screenshot of GasBuddy showing 4 gas station locations with their prices" /></p>
-<p>Each location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.</p>
-<p>All spatial data uses this format - location + attribute information - but how the information is structured depends on the data model and the File Format you store the data in.</p>
+<p>Each gas station location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.</p>
+<p>All spatial data uses this format - location + attribute information - but how the information is structured depends on the data model and the file format you store the data in.</p>
 <p>Let’s dig into some more specifics of each data model!</p>
 <!--- VECTOR DATA --->
 </div>

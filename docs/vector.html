@@ -21,10 +21,9 @@
   
 
 <meta name="author" content="Michele Tobias" />
-<meta name="author" content="PhD" />
 
 
-<meta name="date" content="2024-09-25" />
+<meta name="date" content="2024-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -112,11 +111,12 @@
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="other-data-models.html"><a href="other-data-models.html#point-cloud-data"><i class="fa fa-check"></i><b>5.1</b> Point Cloud Data</a></li>
-<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.2</b> Mesh Data</a></li>
+<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2</b> Triangular Irregular Network (TIN)</a></li>
+<li class="chapter" data-level="5.3" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.3</b> Mesh Data</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>6</b> Additional Resources</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops"><i class="fa fa-check"></i><b>6.1</b> Workshops</a></li>
+<li class="chapter" data-level="6.1" data-path="additional-resources.html"><a href="additional-resources.html#workshops-learning"><i class="fa fa-check"></i><b>6.1</b> Workshops &amp; Learning</a></li>
 <li class="chapter" data-level="6.2" data-path="additional-resources.html"><a href="additional-resources.html#software"><i class="fa fa-check"></i><b>6.2</b> Software</a></li>
 <li class="chapter" data-level="6.3" data-path="additional-resources.html"><a href="additional-resources.html#books"><i class="fa fa-check"></i><b>6.3</b> Books</a></li>
 </ul></li>
@@ -148,13 +148,41 @@
 <div id="exercise" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Exercise<a href="vector.html#exercise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi donut locations in downtown. The topic doesn’t really matter. Just draw a map of your choosing.</p>
-<p>How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the Vector data model to represent their ideas.</p>
-<p>Why? Vector data is best for discrete objects.</p>
+<p>How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the <em>vector data model</em> to represent their ideas.</p>
+<p>Why? Vector data is best for <em>discrete objects</em>. The prompt asked you to think about discrete things - buildings, routes, etc. - so you intuitively picked a data model that worked well for this kind of data.</p>
 </div>
 <div id="description-1" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Description<a href="vector.html#description-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Points, lines, polygons</p>
-<p>Geometry + Attributes</p>
+<p>Geometry Representation: Points, Lines, &amp; Polygons</p>
+<p>Attributes Representation: Tables</p>
+<p>Let’s look at some examples of data we can imagine:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Geometry</th>
+<th align="center">Example</th>
+<th align="right">Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Points</td>
+<td align="center">Restaurants</td>
+<td align="right">name, region, price range</td>
+</tr>
+<tr class="even">
+<td>Lines</td>
+<td align="center">Roads</td>
+<td align="right">name, speed limit, type</td>
+</tr>
+<tr class="odd">
+<td>Polygons</td>
+<td align="center">Parks</td>
+<td align="right">name, year opened, playground (Y/N)</td>
+</tr>
+</tbody>
+</table>
+<p>The geometry is usually visually represented at images (points, line, and polygons) but the data is actually stored numerically inside the file as a series of coordinate pairs. The data only covers the place where there is data, not the spaces in between the points, lines, or polygons. Compare this with Raster data in the upcoming sections.</p>
 </div>
 <div id="file-formats-1" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> File Formats<a href="vector.html#file-formats-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -187,6 +215,16 @@
 <td>Geojson</td>
 <td align="center">.geojson</td>
 <td align="right">Open format, human readable</td>
+</tr>
+<tr class="even">
+<td>Google Keyhole Markup Language (KML)</td>
+<td align="center">.kml, .kmz</td>
+<td align="right">Google’s spatial data format</td>
+</tr>
+<tr class="odd">
+<td>GPS eXchange Format</td>
+<td align="center">.gpx</td>
+<td align="right">A common GPS file type</td>
 </tr>
 </tbody>
 </table>

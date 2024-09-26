@@ -19,9 +19,10 @@ vectors-representing-gradients
 raster-representing-discrete-objects
 other-data-models
 point-cloud-data
+triangular-irregular-network-tin
 mesh-data
 additional-resources
-workshops
+workshops-learning
 software
 books
 citations
