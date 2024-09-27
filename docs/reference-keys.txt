@@ -10,6 +10,8 @@ vector
 exercise
 description-1
 examples
+picnic-day-fun
+openstreetmap
 file-formats-1
 raster
 exercise-1

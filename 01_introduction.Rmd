@@ -86,7 +86,7 @@ Let's take a made-up example scenario for consideration. Imagine you are working
 
 #### OpenStreetMap
 
-Here is an example of real vector data in the OpenStreetMap dataset:
+Here is an example of real vector data in the [OpenStreetMap](https://www.openstreetmap.org/#map=18/38.540460/-121.749641) dataset:
 
 ![A screen shot of OpenStreetMap showing the area of the UC Davis campus around the Quad.](images/Vector_Example_OSM.png)
 

@@ -160,8 +160,15 @@
 <p><strong>Geometry Representation:</strong> Points, Lines, &amp; Polygons</p>
 <p><strong>Attributes Representation:</strong> Tables</p>
 <p>The geometry is usually visually represented as images (points, line, and polygons) but the data is actually stored numerically inside the file as a series of coordinate pairs. The data only covers the place where there is data, not the spaces in between the points, lines, or polygons. Compare this with Raster data in the upcoming sections.</p>
+<p>The choice to represent your data as a point, line, or polygon depends on a couple of factors:</p>
+<ol style="list-style-type: decimal">
+<li><strong>The nature of the object in question.</strong> Roads will almost always be lines.</li>
+<li><strong>The scale of the map.</strong> A city will be a polygon when you are zoomed in. But if you are mapping cities at the scale of the whole globe, points are probably a better choice.</li>
+</ol>
 <div id="examples" class="section level3 hasAnchor" number="2.2.1">
 <h3><span class="header-section-number">2.2.1</span> Examples<a href="vector.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="picnic-day-fun" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Picnic Day Fun<a href="vector.html#picnic-day-fun" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Let’s take a made-up example scenario for consideration. Imagine you are working on a new City of Davis program promoting picnicking at local parks on Picnic Day. Your goal is to encourage people to get takeout from local restaurants and eat in a nearby green space. To help people plan, you might make a map with the following vector datasets:</p>
 <table>
 <thead>
@@ -189,14 +196,13 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div id="openstreetmap" class="section level4 hasAnchor" number="2.2.1.2">
+<h4><span class="header-section-number">2.2.1.2</span> OpenStreetMap<a href="vector.html#openstreetmap" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Here is an example of real vector data in the OpenStreetMap dataset:</p>
 <p><img src="images/Vector_Example_OSM.png" alt="A screen shot of OpenStreetMap showing the area of the UC Davis campus around the Quad." /></p>
 <p>Notice how the larger areas (relative to the scale of the map) like buildings and green spaces are represented with polygons. Bike routes and pedestrian paths are lines. Smaller objects like fountains and sculptures are points represented with icons. You can see “Bookhead” on the west side of Shields Library, with an admittedly silly icon. Larger roads look like skinny polygons but are actually lines styled with a wide stroke.</p>
-<p>The choice to represent your data as a point, line, or polygon depends on a couple of factors:</p>
-<ol style="list-style-type: decimal">
-<li><strong>The nature of the object in question.</strong> Roads will almost always be lines.</li>
-<li><strong>The scale of the map.</strong> A city will be a polygon when you are zoomed in. But if you are mapping cities at the scale of the whole globe, points are probably a better choice.</li>
-</ol>
+</div>
 </div>
 </div>
 <div id="file-formats-1" class="section level2 hasAnchor" number="2.3">
