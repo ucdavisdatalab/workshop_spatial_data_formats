@@ -15,15 +15,15 @@ knit: "bookdown::render_book"
 # Overview {-}
 
 ## Description
-In this workshop, participants will learn about commonly used spatial data formats - their structures and when to use any given format.
+In this workshop, participants will learn about commonly used spatial data models and file formats - their structures and when to use any given option.
 
 ## Learning Goals
 
 By the end of this workshop, participants will understand 
 
- * The difference between vector and raster data, as well as some niche formats
- * The reasons to use different data formats
- * The underlying structure of each data type, conceptually
+ * The difference between vector and raster data, as well as some niche data models
+ * The reasons to use different data models
+ * The underlying structure of each data model, conceptually
  
 ## Prerequisites
 
