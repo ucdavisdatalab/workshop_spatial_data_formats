@@ -27,4 +27,4 @@ By the end of this workshop, participants will understand
  
 ## Prerequisites
 
-There are no prerequisites for this workshop and no software to install.
+This workshop is intended for beginners and is presented as a lecture with demonstrations of data. There are no prerequisites for this workshop and no software to install.

@@ -23,7 +23,7 @@ Why do we need to know about different spatial data models and data formats? Can
 
 When we **use** spatial data, we need to know what model it uses so we can make good decisions about how to analyze it efficiently. Knowing the model and structure gives us intuition about how we can work with the data inside any given file.
 
-When we **make** spatial data, we need to choose a model and file format that will represent the real world with the highest degree of accuracy.
+When we **make** spatial data, we need to choose a model and file format that will represent the real world with the highest degree of accuracy for the intended use case.
 
 ## The Big Picture
 
@@ -230,7 +230,7 @@ Zoomed out, it might looks like this data is vector data because individual fiel
 
 ## Point Cloud Data
 
-Point cloud data is a special instance of vector data. Points represent the elevation at which a lidar beam intersects with an object to produce a high volume of points that can be used to construct elevation models or 3D models.
+Point cloud data is a special instance of vector data. Points represent the height at which a lidar beam intersects with an object to produce a high volume of points that can be used to construct elevation models or 3D models. Point cloud points contain x, y, & z data.
 
 The [PDAL library](https://pdal.io/) (pronounced "pee-dahl" or "poodle") is a common tool for working with and visualizing this kind of data.
 
@@ -252,6 +252,16 @@ Hexagonal (Hex for short) Grids have cells that are hexagonal in shape instead o
 <!--- Additional Resources --->
 # Additional Resources
 
+## File Formats
+
+[GIS Geography: The Ultimate List of GIS Formats and Geospatial File Extensions](https://gisgeography.com/gis-formats/)
+
+[Cloud-Optimized Geospatial Formats Guide](https://guide.cloudnativegeo.org/)
+
+[NCAR Climate Data Guide: Common Climate Data Formats: Overview](https://climatedataguide.ucar.edu/climate-tools/common-climate-data-formats-overview)
+
+
+
 ## Workshops & Tutorials
 
 [DataLab: Intro to GIS with QGIS](https://ucdavisdatalab.github.io/Intro-to-Desktop-GIS-with-QGIS/)
@@ -260,9 +270,6 @@ Hexagonal (Hex for short) Grids have cells that are hexagonal in shape instead o
 
 [DataLab: Spatial SQL](https://ucdavisdatalab.github.io/Spatial_SQL/)
 
-[GIS Geography: The Ultimate List of GIS Formats and Geospatial File Extensions](https://gisgeography.com/gis-formats/)
-
-[NCAR Climate Data Guide: Common Climate Data Formats: Overview](https://climatedataguide.ucar.edu/climate-tools/common-climate-data-formats-overview)
 
 [#maptimeDavis' Workshop Archive](https://maptimedavis.github.io/) - click Archive
 
