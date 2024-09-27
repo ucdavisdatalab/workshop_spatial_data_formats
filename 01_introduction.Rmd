@@ -50,7 +50,9 @@ Let's dig into some more specifics of each data model!
 
 ## Exercise 
 
-Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi donut locations in downtown. The topic doesn't really matter. Just draw a map of your choosing.
+Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi doughnut locations in downtown. The topic doesn't really matter. Just draw a map of your choosing.
+
+![A hand-drawn map](images/hand-drawn-map.jpg)
 
 How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the *vector data model* to represent their ideas.
 
