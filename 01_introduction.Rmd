@@ -166,21 +166,25 @@ Here are some common file formats you'll encounter when working with **other** d
 <!--- Additional Resources --->
 # Additional Resources
 
-## Workshops & Learning
+## Workshops & Tutorials
 
-[Intro to GIS with QGIS](https://ucdavisdatalab.github.io/Intro-to-Desktop-GIS-with-QGIS/)
+[DataLab: Intro to GIS with QGIS](https://ucdavisdatalab.github.io/Intro-to-Desktop-GIS-with-QGIS/)
 
-[Cartography for Map Figures in Academic Journals & Books](https://github.com/MicheleTobias/Workshop-Cartography-Journal-Figures/blob/master/README.md)
+[DataLab: Cartography for Map Figures in Academic Journals & Books](https://github.com/MicheleTobias/Workshop-Cartography-Journal-Figures/blob/master/README.md)
+
+[DataLab: Spatial SQL](https://ucdavisdatalab.github.io/Spatial_SQL/)
 
 [GIS Geography: The Ultimate List of GIS Formats and Geospatial File Extensions](https://gisgeography.com/gis-formats/)
 
 [NCAR Climate Data Guide: Common Climate Data Formats: Overview](https://climatedataguide.ucar.edu/climate-tools/common-climate-data-formats-overview)
 
+[#maptimeDavis' Workshop Archive](https://maptimedavis.github.io/) - click Archive
+
 ## Software
 
-[QGIS](https://qgis.org/) - always free, open source
+[QGIS](https://qgis.org/) - free and open source desktop GIS with a graphical user interface
 
-[ArcGIS Pro](https://servicehub.ucdavis.edu/servicehub?id=ucd_kb_article&sys_id=66e8687fdb0aeb006939fd831d961941) - free for UC Davis campus affiliates, but very expensive to purchase on your own
+[ArcGIS Pro](https://servicehub.ucdavis.edu/servicehub?id=ucd_kb_article&sys_id=66e8687fdb0aeb006939fd831d961941) - proprietary desktop GIS with a graphical user interface; license fees are negotiated and paid for by the university for UC Davis campus affiliates
 
 
 ## Books
