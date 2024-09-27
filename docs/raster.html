@@ -104,7 +104,8 @@
 <ul>
 <li class="chapter" data-level="3.1" data-path="raster.html"><a href="raster.html#exercise-1"><i class="fa fa-check"></i><b>3.1</b> Exercise</a></li>
 <li class="chapter" data-level="3.2" data-path="raster.html"><a href="raster.html#description-2"><i class="fa fa-check"></i><b>3.2</b> Description</a></li>
-<li class="chapter" data-level="3.3" data-path="raster.html"><a href="raster.html#file-formats-2"><i class="fa fa-check"></i><b>3.3</b> File Formats</a></li>
+<li class="chapter" data-level="3.3" data-path="raster.html"><a href="raster.html#examples-1"><i class="fa fa-check"></i><b>3.3</b> Examples</a></li>
+<li class="chapter" data-level="3.4" data-path="raster.html"><a href="raster.html#file-formats-2"><i class="fa fa-check"></i><b>3.4</b> File Formats</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="cross-over-data.html"><a href="cross-over-data.html"><i class="fa fa-check"></i><b>4</b> Cross-Over Data</a>
 <ul>
@@ -151,20 +152,31 @@
 <div id="exercise-1" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Exercise<a href="raster.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Open an image or photo on your phone or computer. Zoom in really far. What do you see?</p>
-<p>Image files are composed of a grid (imagine graph paper) where each square contains a color. When you zoom out, our brains interpret the image as objects, but it’s really a bunch of colored squares. Squares next to each other might be similar in color, but contain small differences in shade or value. A square could contain virtually any color. (Technically, there are limits on the number of colors, but we’re not going to get into that today.)</p>
-<p>Most photographs you find will be formatted as Raster data.</p>
+<p><img src="images/Raster_Example_Pixels.png" alt="A very zoomed-in image of a beach in a Sentinel 2 satellite image" /></p>
+<p><em>Above: A very zoomed in image of a beach in a Sentinel 2 satellite image</em></p>
+<p><img src="images/Raster_Example_WholeImage.png" alt="A zoomed-out image of the same beach in a Sentinel 2 satellite image" /></p>
+<p><em>Above: A zoomed-out image of the same beach in a Sentinel 2 satellite image</em></p>
+<p>Image files like your phone’s camera produces are composed of a grid (imagine graph paper) where each square contains a color. When you zoom out, our brains interpret the image as objects, but it’s really a bunch of colored squares. Squares next to each other might be similar in color, but contain small differences in shade or value. A square could contain virtually any color. (Technically, there are limits on the number of colors, but we’re not going to get into that today.)</p>
+<p>Most digital photographs you find will be formatted as Raster data.</p>
 <p>Why? Raster data is best for gradients.</p>
 </div>
 <div id="description-2" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Description<a href="raster.html#description-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Geometry Representation: Grid</p>
-<p>Attributes Representation: each cell contains one piece of information
-Can have multiple layers (often called bands)</p>
-<p>One piece of information can be stored in each layer or band. This is why it is common to have multiband images. For example, a “color” image is composed on 3 bands - the red, green, and blue components are stored in separate layers and combine by your image viewer software to make it look they way you’d expect.</p>
+<p><strong>Geometry Representation:</strong> Grid</p>
+<p><strong>Attributes Representation:</strong> each cell contains one piece of information, represented as either discrete or continuous values</p>
 <p>Coverage is continuous across the dataset, unlike vector data.</p>
+<p>One piece of information can be stored in each layer or band. This is why it is common to have multiband images. For example, a “color” image is composed on 3 bands - the red, green, and blue components are stored in separate layers and combine by your image viewer software to make it look they way you’d expect.</p>
+<p>Bands can also be used to represent different points in time. For example, you might have a raster file containing precipitation values with bands for ten different years.</p>
 </div>
-<div id="file-formats-2" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> File Formats<a href="raster.html#file-formats-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="examples-1" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Examples<a href="raster.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://www.nnvl.noaa.gov/view/globaldata.html#RAIN">NOAA’s Climate Data Viewer</a> allows users to explore climate datasets online though an interactive web map. This tool loads raster datasets for various climate and weather measurements and stores each time period as a different band.</p>
+<p><img src="images/Raster_Example_NOAAClimateDataMapper.png" alt="A screenshot of NOAA’s Cliamte Data Mapper interactive online tool" /></p>
+<p><em>Above: A screenshot of NOAA’s Cliamte Data Mapper interactive online tool showing accumulated rainfall totals for 2024-09-16 through 2024-09-22. Darker blues are higher amounts of precipitation.</em></p>
+<p>The raster data model represents precipitation (or temperature, or elevation, etc.) well because the values we want to store are continuous and the coverage is also continuous. Where I’m standing might have an inch of rain, but 100 feet away maybe recieved 1.1 inches, for example. And we are probably interested in the rainfall measurements everywhere, not just in discrete locations if we’re tracking weather data.</p>
+</div>
+<div id="file-formats-2" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> File Formats<a href="raster.html#file-formats-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here are some common file formats you’ll encounter when working with <strong>raster</strong> data:</p>
 <table>
 <colgroup>
