@@ -22,7 +22,7 @@ point-cloud-data
 triangular-irregular-network-tin
 mesh-data
 additional-resources
-workshops-learning
+workshops-tutorials
 software
 books
 citations
