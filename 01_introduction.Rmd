@@ -66,7 +66,14 @@ Why? Vector data is best for *discrete objects*. The prompt asked you to think a
 
 The geometry is usually visually represented as images (points, line, and polygons) but the data is actually stored numerically inside the file as a series of coordinate pairs. The data only covers the place where there is data, not the spaces in between the points, lines, or polygons. Compare this with Raster data in the upcoming sections.
 
+The choice to represent your data as a point, line, or polygon depends on a couple of factors:
+
+1. **The nature of the object in question.** Roads will almost always be lines.
+1. **The scale of the map.** A city will be a polygon when you are zoomed in. But if you are mapping cities at the scale of the whole globe, points are probably a better choice.
+
 ### Examples
+
+#### Picnic Day Fun
 
 Let's take a made-up example scenario for consideration. Imagine you are working on a new City of Davis program promoting picnicking at local parks on Picnic Day. Your goal is to encourage people to get takeout from local restaurants and eat in a nearby green space.  To help people plan, you might make a map with the following vector datasets:
 
@@ -77,6 +84,7 @@ Let's take a made-up example scenario for consideration. Imagine you are working
 | Polygons    | Parks | name, year opened, playground (Y/N) |
 
 
+#### OpenStreetMap
 
 Here is an example of real vector data in the OpenStreetMap dataset:
 
@@ -84,10 +92,7 @@ Here is an example of real vector data in the OpenStreetMap dataset:
 
 Notice how the larger areas (relative to the scale of the map) like buildings and green spaces are represented with polygons. Bike routes and pedestrian paths are lines. Smaller objects like fountains and sculptures are points represented with icons. You can see "Bookhead" on the west side of Shields Library, with an admittedly silly icon. Larger roads look like skinny polygons but are actually lines styled with a wide stroke.
 
-The choice to represent your data as a point, line, or polygon depends on a couple of factors:
 
-1. **The nature of the object in question.** Roads will almost always be lines.
-1. **The scale of the map.** A city will be a polygon when you are zoomed in. But if you are mapping cities at the scale of the whole globe, points are probably a better choice.
 
 
 ## File Formats

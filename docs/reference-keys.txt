@@ -9,6 +9,7 @@ the-big-picture
 vector
 exercise
 description-1
+examples
 file-formats-1
 raster
 exercise-1
