@@ -109,14 +109,23 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="cross-over-data.html"><a href="cross-over-data.html"><i class="fa fa-check"></i><b>4</b> Cross-Over Data</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="cross-over-data.html"><a href="cross-over-data.html#vectors-representing-gradients"><i class="fa fa-check"></i><b>4.1</b> Vectors Representing Gradients</a></li>
-<li class="chapter" data-level="4.2" data-path="cross-over-data.html"><a href="cross-over-data.html#raster-representing-discrete-objects"><i class="fa fa-check"></i><b>4.2</b> Raster Representing Discrete Objects</a></li>
+<li class="chapter" data-level="4.1" data-path="cross-over-data.html"><a href="cross-over-data.html#vectors-representing-gradients"><i class="fa fa-check"></i><b>4.1</b> Vectors Representing Gradients</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="cross-over-data.html"><a href="cross-over-data.html#examples-2"><i class="fa fa-check"></i><b>4.1.1</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="cross-over-data.html"><a href="cross-over-data.html#raster-representing-discrete-objects"><i class="fa fa-check"></i><b>4.2</b> Raster Representing Discrete Objects</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="cross-over-data.html"><a href="cross-over-data.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="other-data-models.html"><a href="other-data-models.html#point-cloud-data"><i class="fa fa-check"></i><b>5.1</b> Point Cloud Data</a></li>
-<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2</b> Triangular Irregular Network (TIN)</a></li>
-<li class="chapter" data-level="5.3" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.3</b> Mesh Data</a></li>
+<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.2</b> Mesh Data</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2.1</b> Triangular Irregular Network (TIN)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="other-data-models.html"><a href="other-data-models.html#hexagonal-grids"><i class="fa fa-check"></i><b>5.2.2</b> Hexagonal Grids</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>6</b> Additional Resources</a>
 <ul>
@@ -149,16 +158,41 @@
             <section class="normal" id="section-">
 <div id="cross-over-data" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">4</span> Cross-Over Data<a href="cross-over-data.html#cross-over-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Until now, we’ve considered our data models in a fairly narrow context - vector data is for discrete objects and raster data is for continuous measurements. But, there are times these rules don’t fit our data or use case. Let’s look at some cross-over data examples.</p>
 <p><img src="images/geometries_data_types.png" alt="A grid comparing discrete vs. continuous data and raster vs. vector data representations of these two situations." /></p>
 <p><em>Above: A grid comparing discrete vs. continuous data and raster vs. vector data representations of these two situations.</em></p>
 <div id="vectors-representing-gradients" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Vectors Representing Gradients<a href="cross-over-data.html#vectors-representing-gradients" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Topo lines, Isotherms, etc.</p>
+<p>Sometimes it is easier to understand or work with continuous data if we group it into similar values. (People sometimes this process names like discretizing, binning, or chunking.) In a non-spatial context, we make histograms by counting the number of values that fall into “bins” of data to understand data distributions. When we use vector data to represent continuous data, we typically use lines to represent the boundaries between ranges of data values.</p>
+<p>Common examples include topographic lines, isotherms (lines of equal temperature), or isochrones (lines of equal travel time).</p>
+<div id="examples-2" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Examples<a href="cross-over-data.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="topographic-lines" class="section level4 hasAnchor" number="4.1.1.1">
+<h4><span class="header-section-number">4.1.1.1</span> Topographic Lines<a href="cross-over-data.html#topographic-lines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Topographic (“topo” for short) lines show lines of equal elevation. Representing elevation in this way is efficient and, while not immediately intuitive to understand, a person can learn to interpret these kinds of maps with a little training.</p>
+<p><img src="images/CrossOver_Example_Topo.png" alt="A clip of the northwest corner of the 1889 USGS Markleeville, CA topo map (1:125000 scale)" /></p>
+<p><em>Above: A clip of the northwest corner of the 1889 USGS Markleeville, CA topo map (1:125000 scale)</em></p>
+<p>In this map, you can immediately see which parts of the landscape are steep and mountainous where the lines are close together because the elevation changes quickly (the west side of the map) and which parts are essentially flat (the east side) where the lines are far apart. Elevation values are communicated with labels and a key to tell you the increment for non-labeled lines (or you can count the unlabeled lines between the labeled ones and do a little math).</p>
+<p>Explore more topo maps at the <a href="https://ngmdb.usgs.gov/topoview/viewer">USGS TopoView</a> website. USGS has scanned most (if not all) of the topo maps made by the USGS and the site includes spatial data downloads for maps ranging from the 1800s to the present.</p>
+</div>
+</div>
 </div>
 <div id="raster-representing-discrete-objects" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Raster Representing Discrete Objects<a href="cross-over-data.html#raster-representing-discrete-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Crop Type Maps, raster masks, scanned maps like USGS topo maps</p>
+<p>Sometimes it makes more sense to represent discrete objects in a raster. Masking raster layers to indicate areas to include and exclude from an analysis are common, as are crop type maps. Rasters can sometime store large datasets like crop cover more efficiently. Rasters may also be needed for specific types of analysis.</p>
+<p>Scanned maps that represent features with points, lines, and polygons (like the USGS topo maps we looked above) are also technically raster data.</p>
+<div id="example" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Example<a href="cross-over-data.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cropscape" class="section level4 hasAnchor" number="4.2.1.1">
+<h4><span class="header-section-number">4.2.1.1</span> CropScape<a href="cross-over-data.html#cropscape" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>It’s fairly common to represent landcover with raster data. One reason for this is that the file size is smaller when you use raster data than vector data, given the complex nature of the boundaries between crop types. Another reason is that many land cover analyses use mostly raster datasets as inputs, so having this data produced and available as a raster dataset works well with the other data you might use for this kind of work.</p>
+<p>The USDA National Agricultural Statistical Service (NASS) produces a raster dataset of crop cover for the US called CropScape. George Mason University’s Center for Spatial Informationa Science and Systems displays this data on an <a href="https://nassgeodata.gmu.edu/CropScape/">interactive webmap</a> that makes it easy to explore the dataset.</p>
+<p><img src="images/CrossOver_Example_CropScape.png" alt="CropScape represents crop cover as raster data" /></p>
+<p><em>Above: CropScape represents crop cover as raster data</em></p>
+<p>Zoomed out, it might looks like this data is vector data because individual fields tend to have one crop type so it looks like the fields are polygons. But zoom in, especially to an edge area, and you’ll see the pixels.</p>
 <!--- OTHER DATA --->
+</div>
+</div>
 </div>
 </div>
             </section>

@@ -109,14 +109,23 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="cross-over-data.html"><a href="cross-over-data.html"><i class="fa fa-check"></i><b>4</b> Cross-Over Data</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="cross-over-data.html"><a href="cross-over-data.html#vectors-representing-gradients"><i class="fa fa-check"></i><b>4.1</b> Vectors Representing Gradients</a></li>
-<li class="chapter" data-level="4.2" data-path="cross-over-data.html"><a href="cross-over-data.html#raster-representing-discrete-objects"><i class="fa fa-check"></i><b>4.2</b> Raster Representing Discrete Objects</a></li>
+<li class="chapter" data-level="4.1" data-path="cross-over-data.html"><a href="cross-over-data.html#vectors-representing-gradients"><i class="fa fa-check"></i><b>4.1</b> Vectors Representing Gradients</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="cross-over-data.html"><a href="cross-over-data.html#examples-2"><i class="fa fa-check"></i><b>4.1.1</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="cross-over-data.html"><a href="cross-over-data.html#raster-representing-discrete-objects"><i class="fa fa-check"></i><b>4.2</b> Raster Representing Discrete Objects</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="cross-over-data.html"><a href="cross-over-data.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="other-data-models.html"><a href="other-data-models.html#point-cloud-data"><i class="fa fa-check"></i><b>5.1</b> Point Cloud Data</a></li>
-<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2</b> Triangular Irregular Network (TIN)</a></li>
-<li class="chapter" data-level="5.3" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.3</b> Mesh Data</a></li>
+<li class="chapter" data-level="5.2" data-path="other-data-models.html"><a href="other-data-models.html#mesh-data"><i class="fa fa-check"></i><b>5.2</b> Mesh Data</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="other-data-models.html"><a href="other-data-models.html#triangular-irregular-network-tin"><i class="fa fa-check"></i><b>5.2.1</b> Triangular Irregular Network (TIN)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="other-data-models.html"><a href="other-data-models.html#hexagonal-grids"><i class="fa fa-check"></i><b>5.2.2</b> Hexagonal Grids</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>6</b> Additional Resources</a>
 <ul>
@@ -154,30 +163,18 @@
 <p>Point cloud data is a special instance of vector data. Points represent the elevation at which a lidar beam intersects with an object to produce a high volume of points that can be used to construct elevation models or 3D models.</p>
 <p>The <a href="https://pdal.io/">PDAL library</a> (pronounced “pee-dahl” or “poodle”) is a common tool for working with and visualizing this kind of data.</p>
 </div>
-<div id="triangular-irregular-network-tin" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Triangular Irregular Network (TIN)<a href="other-data-models.html#triangular-irregular-network-tin" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Triangular Irregular Networks (TIN) are useful to represent surfaces. Data you might see stored as a TIN includes slope, elevation, and aspect. The geometry for this data model is combination of points, lines, and polygons, called points, edges, and facets.</p>
+<div id="mesh-data" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Mesh Data<a href="other-data-models.html#mesh-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Mesh data combines features from raster and vector data. Coverage is continuous, like a raster, but cells can be shapes other than square, regular or irregular, because the geometry is a combination of points, lines, and polygons, called points, edges, and facets. The QGIS Documentation has an <a href="https://docs.qgis.org/3.34/en/docs/user_manual/working_with_mesh/mesh_properties.html">in-depth explanation of mesh data</a>.</p>
+<div id="triangular-irregular-network-tin" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Triangular Irregular Network (TIN)<a href="other-data-models.html#triangular-irregular-network-tin" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Triangular Irregular Networks (TIN) are useful to represent surfaces. The geometry, as the name implies, is a set of triangles that are any shape and size. Data you might see stored as a TIN includes slope, elevation, and aspect.</p>
 </div>
-<div id="mesh-data" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Mesh Data<a href="other-data-models.html#mesh-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here are some common file formats you’ll encounter when working with <strong>other</strong> data models:</p>
-<table>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th align="center">File Extension</th>
-<th align="right">Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-</tbody>
-</table>
+<div id="hexagonal-grids" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Hexagonal Grids<a href="other-data-models.html#hexagonal-grids" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hexagonal (Hex for short) Grids have cells that are hexagonal in shape instead of squares. Hex grids are common in movement analysis so you’ll see them in the fields of transportation and animal ecology alike. The hexagonal shape gives each cell six neighbors instead of 4 with a square grid, making it easier to describe more natural movement situations.</p>
 <!--- Additional Resources --->
+</div>
 </div>
 </div>
             </section>
