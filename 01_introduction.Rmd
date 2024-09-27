@@ -38,6 +38,8 @@ You're probably already familiar with the idea of locations with attribute infor
 
 ![Screenshot of GasBuddy showing 4 gas station locations with their prices](images/GasBuddy_2024-09-23.png)
 
+Above: Screenshot of GasBuddy showing 4 gas station locations with their prices
+
 Each gas station location is indicated with a marker showing the price of gas, but you can also click on the marker to learn even more about the station - the name, address, rating, and when the price was last updated.
 
 All spatial data uses this format - location + attribute information - but how the information is structured depends on the data model and the file format you store the data in.
@@ -53,6 +55,8 @@ Let's dig into some more specifics of each data model!
 Draw a map on a piece of paper. It could be a map of how you got to this workshop, or how to get to your favorite hiking spot, or of all the mochi doughnut locations in downtown. The topic doesn't really matter. Just draw a map of your choosing.
 
 ![A hand-drawn map](images/hand-drawn-map.jpg)
+
+Above: a sketch of Census tracts overlayed with a travel time polygon.
 
 How did you represent your data? Did you use lines and maybe squares or circles? When asked to draw a map on paper, people usually use the *vector data model* to represent their ideas.
 
@@ -89,6 +93,8 @@ Let's take a made-up example scenario for consideration. Imagine you are working
 Here is an example of real vector data in the [OpenStreetMap](https://www.openstreetmap.org/#map=18/38.540460/-121.749641) dataset:
 
 ![A screen shot of OpenStreetMap showing the area of the UC Davis campus around the Quad.](images/Vector_Example_OSM.png)
+
+Above: A screen shot of OpenStreetMap showing the area of the UC Davis campus around the Quad.
 
 Notice how the larger areas (relative to the scale of the map) like buildings and green spaces are represented with polygons. Bike routes and pedestrian paths are lines. Smaller objects like fountains and sculptures are points represented with icons. You can see "Bookhead" on the west side of Shields Library, with an admittedly silly icon. Larger roads look like skinny polygons but are actually lines styled with a wide stroke.
 
