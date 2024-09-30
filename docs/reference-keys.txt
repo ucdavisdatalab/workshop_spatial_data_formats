@@ -16,14 +16,14 @@ file-formats-1
 raster
 exercise-1
 description-2
-examples-1
+example
 file-formats-2
 cross-over-data
 vectors-representing-gradients
-examples-2
+examples-1
 topographic-lines
 raster-representing-discrete-objects
-example
+example-1
 cropscape
 other-data-models
 point-cloud-data

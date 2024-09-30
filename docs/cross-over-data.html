@@ -104,18 +104,18 @@
 <ul>
 <li class="chapter" data-level="3.1" data-path="raster.html"><a href="raster.html#exercise-1"><i class="fa fa-check"></i><b>3.1</b> Exercise</a></li>
 <li class="chapter" data-level="3.2" data-path="raster.html"><a href="raster.html#description-2"><i class="fa fa-check"></i><b>3.2</b> Description</a></li>
-<li class="chapter" data-level="3.3" data-path="raster.html"><a href="raster.html#examples-1"><i class="fa fa-check"></i><b>3.3</b> Examples</a></li>
+<li class="chapter" data-level="3.3" data-path="raster.html"><a href="raster.html#example"><i class="fa fa-check"></i><b>3.3</b> Example</a></li>
 <li class="chapter" data-level="3.4" data-path="raster.html"><a href="raster.html#file-formats-2"><i class="fa fa-check"></i><b>3.4</b> File Formats</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="cross-over-data.html"><a href="cross-over-data.html"><i class="fa fa-check"></i><b>4</b> Cross-Over Data</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="cross-over-data.html"><a href="cross-over-data.html#vectors-representing-gradients"><i class="fa fa-check"></i><b>4.1</b> Vectors Representing Gradients</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="cross-over-data.html"><a href="cross-over-data.html#examples-2"><i class="fa fa-check"></i><b>4.1.1</b> Examples</a></li>
+<li class="chapter" data-level="4.1.1" data-path="cross-over-data.html"><a href="cross-over-data.html#examples-1"><i class="fa fa-check"></i><b>4.1.1</b> Examples</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="cross-over-data.html"><a href="cross-over-data.html#raster-representing-discrete-objects"><i class="fa fa-check"></i><b>4.2</b> Raster Representing Discrete Objects</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="cross-over-data.html"><a href="cross-over-data.html#example"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
+<li class="chapter" data-level="4.2.1" data-path="cross-over-data.html"><a href="cross-over-data.html#example-1"><i class="fa fa-check"></i><b>4.2.1</b> Example</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="other-data-models.html"><a href="other-data-models.html"><i class="fa fa-check"></i><b>5</b> Other data models</a>
@@ -166,8 +166,8 @@
 <h2><span class="header-section-number">4.1</span> Vectors Representing Gradients<a href="cross-over-data.html#vectors-representing-gradients" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes it is easier to understand or work with continuous data if we group it into similar values. (People sometimes this process names like discretizing, binning, or chunking.) In a non-spatial context, we make histograms by counting the number of values that fall into “bins” of data to understand data distributions. When we use vector data to represent continuous data, we typically use lines to represent the boundaries between ranges of data values.</p>
 <p>Common examples include topographic lines, isotherms (lines of equal temperature), or isochrones (lines of equal travel time).</p>
-<div id="examples-2" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Examples<a href="cross-over-data.html#examples-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="examples-1" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Examples<a href="cross-over-data.html#examples-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="topographic-lines" class="section level4 hasAnchor" number="4.1.1.1">
 <h4><span class="header-section-number">4.1.1.1</span> Topographic Lines<a href="cross-over-data.html#topographic-lines" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Topographic (“topo” for short) lines show lines of equal elevation. Representing elevation in this way is efficient and, while not immediately intuitive to understand, a person can learn to interpret these kinds of maps with a little training.</p>
@@ -182,8 +182,8 @@
 <h2><span class="header-section-number">4.2</span> Raster Representing Discrete Objects<a href="cross-over-data.html#raster-representing-discrete-objects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes it makes more sense to represent discrete objects in a raster. Masking raster layers to indicate areas to include and exclude from an analysis are common, as are crop type maps. Rasters can sometime store large datasets like crop cover more efficiently. Rasters may also be needed for specific types of analysis.</p>
 <p>Scanned maps that represent features with points, lines, and polygons (like the USGS topo maps we looked above) are also technically raster data.</p>
-<div id="example" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Example<a href="cross-over-data.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="example-1" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Example<a href="cross-over-data.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="cropscape" class="section level4 hasAnchor" number="4.2.1.1">
 <h4><span class="header-section-number">4.2.1.1</span> CropScape<a href="cross-over-data.html#cropscape" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>It’s fairly common to represent landcover with raster data. One reason for this is that the file size is smaller when you use raster data than vector data, given the complex nature of the boundaries between crop types. Another reason is that many land cover analyses use mostly raster datasets as inputs, so having this data produced and available as a raster dataset works well with the other data you might use for this kind of work.</p>
