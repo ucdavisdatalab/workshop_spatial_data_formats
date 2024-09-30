@@ -107,9 +107,10 @@ Here are some common file formats you'll encounter when working with **vector** 
 
 | Name          | File Extension| Notes  |
 | ------------- |:-------------:| ------:|
-| Shapefile     | .shp (with .shx, .dbf, etc.) | Keep all the "sidecar" files together |
 | Geopackage    | .gpkg         | Open format, easy organizing |
 | Geojson       | .geojson      | Open format, human readable  |
+| Shapefile     | .shp (with .shx, .dbf, etc.) | Keep all the "sidecar" files together |
+| File Geodatabase | .gdb | Stored as a collection of files in a folder, don't edit the files directly |
 | Google Keyhole Markup Language (KML) | .kml, .kmz | Google's spatial data format |
 | GPS eXchange Format | .gpx | A common GPS file type |
 
@@ -140,7 +141,7 @@ Why? Raster data is best for gradients.
 
 **Geometry Representation:** Grid
 
-**Attributes Representation:** each cell contains one piece of information, represented as either discrete or continuous values
+**Attributes Representation:** each cell contains one piece of information, represented as either discrete (categorical) or continuous values (gradient of numbers - e.g. 1.0, 1.1, 3.6, etc.)
 
 Coverage is continuous across the dataset, unlike vector data.
 
@@ -169,6 +170,7 @@ Here are some common file formats you'll encounter when working with **raster** 
 | geopackage    | .gpkg         | Yes, it stores both raster and vector data  |
 | netCDF        | .nc           | Common in weather & climate data |
 | Hierarchical Data Format (HDF)| .hdf5  | Common in weather & climate data |
+| File Geodatabase | .gdb | Yes, it stores both raster and vector data  |
 
 
 <!--- CROSS-OVER DATA --->
